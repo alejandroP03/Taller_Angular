@@ -1,0 +1,44 @@
+<main class="container-fluid row p-5" data-bs-theme="dark">
+	<div class="container-md w-50 card bg-body-secondary p-3 col-2 h-25">
+		<h1>Top Series</h1>
+		<table class="table table-dark table-striped table-hover">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">Channel</th>
+					<th scope="col">Season</th>
+				</tr>
+			</thead>
+			<tbody id="series_info" class="body_text">
+				<tr *ngFor="let s of series">
+					<td>
+						<dd>{{ s.id }}</dd>
+					</td>
+					<td>
+						<a href={{s.webpage}} target="_blank">
+							<dd>{{ s.name }}</dd>
+						</a>
+					</td>
+					<td>
+						<dd>{{ s.channel }}</dd>
+					</td>
+					<td>
+						<dd>{{ s.seasons }}</dd>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="text-md-start">
+			Season average: {{seasonsAverage}}
+		</div>
+	</div>
+	<div class="card col-sm-3 visually-hidden p-0 overflow-auto h" id="card">
+		<img src="" id="card-img" class="card-img-top" />
+		<div class="card-body">
+			<h5 id="card-title" class="card-title"></h5>
+			<p id="card-description" class="card-text"></p>
+			<a href="" id="card-link"></a>
+		</div>
+	</div>
+</main>
